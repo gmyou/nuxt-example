@@ -1,9 +1,19 @@
 <template>
-  <Tutorial/>
+  <div @click="foo">
+    a = {{ a }}
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  data: () => ({
+    a: 10,
+  }),
+  methods: {
+    foo() {
+      this.a += 1;
+    }
+  }
 }
 </script>
